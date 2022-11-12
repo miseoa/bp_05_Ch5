@@ -1,68 +1,44 @@
 import turtle
->>> t=turtle.Turtle()
->>> t.shape("turtle")
->>> 
->>> big_x=inn(input("큰 원의 중심 좌표 x1:"))
-Traceback (most recent call last):
-  File "<pyshell#4>", line 1, in <module>
-    big_x=inn(input("큰 원의 중심 좌표 x1:"))
-NameError: name 'inn' is not defined
->>> big_x=int(input("큰 원의 중심 좌표 x1:"))
-큰 원의 중심 좌표 x1:0
->>> big_y=int(input("큰 원의 중심 좌표 y1:"))
-큰 원의 중심 좌표 y1:0
->>> big_r=int(input("큰 원의 반지름:"))
-큰 원의 반지름:100
->>> 
->>> small_x=int(input("작은 원의 중심 좌표 x2:"))
-작은 원의 중심 좌표 x2:10
->>> small_y=int(input("작은 원의 중심 좌표 y2:"))
-작은 원의 중심 좌표 y2:10
->>> small_r=int(input("작은 원의 반지름:"))
-작은 원의 반지름:50
->>> 
->>> t.up()
->>> t.goto(big_x, big_y)
->>> t.down()
->>> t.circle(big_r)
->>> 
->>> t.up()
->>> t.goto(small_x, small_y)
->>> t.down()
->>> t.circle(small_r)
->>> 
-SyntaxError: multiple statements found while compiling a single statement
->>> t.up()
->>> t.goto(small_x, small_y)
->>> t.down()
->>> t.circle(small_r)
-SyntaxError: multiple statements found while compiling a single statement
->>> t.up()
->>> t.goto(small_x, small_y)
->>> t.down()
->>> t.circle(small_r)
->>> 
-SyntaxError: multiple statements found while compiling a single statement
->>> t.up()
->>> t.goto(small_x, small_y)
->>> t.down()
->>> t.circle(small_r)
->>> 
->>> distance=((big_x-small_x)**2+(big_y-small_y)**2)**0.5
->>> if distance<(big_r-small_r):
-	t.write("두 번째 원이 첫 번째 원의 내부에 있습니다.")
-	print("두 번재 원이 첫 번째 원의 내부에 있습니다.")
 
-	
-두 번재 원이 첫 번째 원의 내부에 있습니다.
->>> elif distance==(big_r+small_r) or distance==(big_r+small_r):
-	
-SyntaxError: invalid syntax
->>> elif distance==(big_r+small_r) or distance==(big_r+small_r):
-	
-SyntaxError: invalid syntax
->>> elif distance==(big_r+small_r)or distance== (big_r+small_r):
-	
-SyntaxError: invalid syntax
->>> 
->>> 
+t=turtle.Turtle()
+t.shape("turtle")
+
+big_x=int(input("큰 원의 중심 좌표 x1:"))
+큰 원의 중심 좌표 x1:0
+big_y=int(input("큰 원의 중심 좌표 y1:"))
+큰 원의 중심 좌표 y1:0
+big_r=int(input("큰 원의 반지름 :"))
+큰 원의 반지름 :100
+
+small_x=int(input("작은 원의 중심 좌표 x2:"))
+작은 원의 중심 좌표 x2:10
+small_y=int(input("작은 원의 중심 좌표 y2:"))
+작은 원의 중심 좌표 y2:10
+small_r=int(input("작은 원의 반지름:"))
+작은 원의 반지름:50
+
+t.up()
+t.goto(big_x, big_y)
+t.down()
+t.circle(big_r)
+
+t.up()
+t.goto(small_x, small_y)
+t.down()
+t.circle(small_r)
+
+distance=((big_x-small_x)**2+(big_y-small_y)**2)**0.5
+
+if distance < (big_r - small_r):
+    t.write("두 번째 원이 첫 번째 원의 내부에 있습니다.")
+    print("두 번째 원이 첫 번째 원의 내부에 있습니다.")
+elif distance == (big_r + small_r) or distance == (big_r + small_r):
+    t.write("두 원이 겹쳐 있습니다.")
+    print("두 원이 겹쳐 있습니다.")
+else:
+    t.write("두 번째 원이 첫 번째 원의 내부에 있지 않습니다.")
+    print("두 번째 원이 첫 번째 원의 내부에 있지 않습니다.")
+
+    
+두 번째 원이 첫 번째 원의 내부에 있습니다.
+
